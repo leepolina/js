@@ -30,23 +30,13 @@ let dayMessage;
 
 switch (b) {
   case "понеділок":
-    dayMessage = "Це робочий день";
-    break;
   case "вівторок":
-    dayMessage = "Це робочий день";
-    break;
   case "середа":
-    dayMessage = "Це робочий день";
-    break;
   case "четвер":
-    dayMessage = "Це робочий день";
-    break;
   case "п'ятниця":
     dayMessage = "Це робочий день";
     break;
   case "субота":
-    dayMessage = "Це вихідний день";
-    break;
   case "неділя":
     dayMessage = "Це вихідний день";
     break;
@@ -54,49 +44,48 @@ switch (b) {
 
 console.log(dayMessage);
 
-let c = Number(prompt("Enter the number of month"))
+let c = Number(prompt("Enter the number of month"));
 let month;
 
-switch(c){
-    case 1:
-        month = "January";
+switch (c) {
+  case 1:
+    month = "January";
     break;
-    case 2:
-        month = "February"
-    break
-    case 3:
-        month = "March"
+  case 2:
+    month = "February";
     break;
-    case 4:
-        month = "April"
+  case 3:
+    month = "March";
     break;
-    case 5:
-        month = "May"
+  case 4:
+    month = "April";
     break;
-    case 6:
-        month = "June"
+  case 5:
+    month = "May";
     break;
-    case 7:
-        month = "July"
+  case 6:
+    month = "June";
     break;
-    case 8:
-        month = "August"
+  case 7:
+    month = "July";
     break;
-    case 9:
-        month = "September"
+  case 8:
+    month = "August";
     break;
-    case 10:
-        month = "October"
+  case 9:
+    month = "September";
     break;
-    case 11:
-        month = "November"
+  case 10:
+    month = "October";
     break;
-    case 12:
-        month = "December"
+  case 11:
+    month = "November";
     break;
-
+  case 12:
+    month = "December";
+    break;
 }
-console.log(month)
+console.log(month);
 
 let d = prompt("Enter the color");
 let color;
