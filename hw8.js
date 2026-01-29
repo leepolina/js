@@ -43,10 +43,9 @@ cards.splice(cards.length, 0, cardToInsert);
 console.log(cards);
 
 //оновити
-const cardToUpdate = "Карточка-4";
+const cardToUpdate = "Карточка-4 lalala";
 const index = cards.indexOf(cardToUpdate);
 
-if (index !== -1) {
-  cards.splice(index, 1, cardToUpdate);
-}
+cards.splice(3, 1, cardToUpdate);
+
 console.log(cards);
