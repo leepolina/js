@@ -112,7 +112,7 @@ const cart = {
   },
   add(product) {
     for (let i = 0; i < this.items.length; i++) {
-      if ((this.items[i], name === product.name)) {
+      if (this.items[i].name === product.name) {
         this.items[i].quantity += 1;
         return;
       }
@@ -121,18 +121,64 @@ const cart = {
     this.items.push(product);
   },
   remove(productName) {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].name === productName) {
+        if (this.items[i].quantity > 1) {
+          this.items[i].quantity -= 1;
+        } else {
+          this.items.splice(i, 1);
+        }
+        return;
+      }
+    }
   },
   clear() {
-    this.items = []
+    this.items = [];
   },
-  countTotalPrice() {},
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
+  countTotalPrice() {
+    let total = 0;
+    for (let i = 0; i < this.items.length; i++) {
+      total += this.items[i].price * this.items[i].quantity;
+    }
+    return total;
+  },
+  increaseQuantity(productName) {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].name === productName) {
+        this.items[i].quantity += 1;
+        return;
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].name === productName) {
+        if (this.items[i].quantity > 1) {
+          this.items[i].quantity -= 1;
+        } else {
+          this.items.splice(i, 1);
+        }
+        return;
+      }
+    }
+  },
 };
 
 cart.add({ name: "🍎", price: 50 });
 cart.add({ name: "🍇", price: 70 });
 cart.add({ name: "🍋", price: 60 });
 cart.add({ name: "🍓", price: 110 });
+cart.add({ name: "🍓", price: 110 });
+cart.add({ name: "🍓", price: 110 });
+cart.add({ name: "🍓", price: 110 });
 
 console.log(cart.getItems());
+cart.remove("🍎");
+cart.remove("🍓");
+console.log(cart.getItems());
+console.log("Сума до оплати:", cart.countTotalPrice());
+
+cart.increaseQuantity("🍋");
+console.log("Кількість:", cart.increaseQuantity());
+
+cart.decreaseQuantity("🍇");
