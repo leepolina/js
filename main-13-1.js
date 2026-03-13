@@ -72,3 +72,16 @@
 // }
 
 // console.log(name);
+
+// const user = {
+//   name: "polina",
+//   age: 16,
+//   city: "Busan",
+// };
+
+// for (const key in user) {
+//   console.log(user[key]);
+// }
+
+// const newUser = JSON.parse(JSON.stringify(user));
+// const bestUser = structuredClone(user);
