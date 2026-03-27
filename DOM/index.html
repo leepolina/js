@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form name="search">
+      <label
+        >Search the site:
+        <input type="text" name="search" />
+      </label>
+      <input type="submit" value="Search!" />
+    </form>
+
+    <hr />
+
+    <form name="search-person">
+      Search the visitors:
+      <table id="age-table">
+        <tr>
+          <td>Age:</td>
+          <td id="age-list">
+            <label>
+              <input type="radio" name="age" value="young" />less than 18</label
+            >
+            <label>
+              <input type="radio" name="age" value="mature" />18-50</label
+            >
+            <label>
+              <input type="radio" name="age" value="senior" />more than
+              50</label
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Additionally:</td>
+          <td>
+            <input type="text" name="info[0]" />
+            <input type="text" name="info[1]" />
+            <input type="text" name="info[2]" />
+          </td>
+        </tr>
+      </table>
+
+      <input type="submit" value="Search!" />
+    </form>
+
+    <!-- 
+    <h1></h1>
+
+
+<a name="list">список</a>
+<ul>
+  <li><a href="https://google.com">http://google.com</a></li>
+  <li><a href="/tutorial">/tutorial.html</a></li>
+  <li><a href="local/path">local/path</a></li>
+  <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+  <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul> -->
+    <!-- <h1 class="title">title</h1>
+    <button type="button" class="button" id="btn">кнопка</button>
+    <img src="" alt="" id="image" />
+
+    <div class="div" id="firstDiv"></div> -->
+    <!-- 
+    <div>
+      <h2>Title</h2>
+      <p>Some text</p>
+      <ul>
+        <li><a href="#" class="insta">link 1</a></li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+      </ul>
+    </div> -->
+
+    <script src="./main2.js"></script>
+  </body>
+</html>
